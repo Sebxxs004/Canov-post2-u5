@@ -48,7 +48,8 @@ public class CarritoServlet extends HttpServlet {
             carrito.clear();
         }
         resp.sendRedirect(req.getContextPath() +
-        ("verCarrito".equals(accion) ? "/carrito" : "/catalogo"));
+        ("agregar".equals(accion) || "verCarrito".equals(accion)
+        ? "/carrito" : "/catalogo"));
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
